@@ -86,7 +86,7 @@ ChromeDriver driver = new ChromeDriver();
 		            fileInputs.get(1).sendKeys(videoFile.getAbsolutePath());
 		            
 		            // Wait for video upload to complete
-		            Thread.sleep(40000);
+		            Thread.sleep(3000);
 		        }
 		        
 		        // click on save button

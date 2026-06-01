@@ -26,6 +26,14 @@
     <version>5.8.0</version>
 </dependency>
 
+ <!-- TestNG -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>test</scope>
+        </dependency>
+
 
   
   

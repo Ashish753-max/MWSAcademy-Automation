@@ -6,32 +6,59 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginTest {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-ChromeDriver driver = new ChromeDriver();
-        
-        // maximize the window
+    ChromeDriver driver;
+
+    @BeforeMethod
+    public void setup() {
+
+    //    WebDriverManager.chromedriver().setup();
+
+        driver = new ChromeDriver();
+
         driver.manage().window().maximize();
-        
-        // open the website 
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    }
+
+    @Test
+    public void validLoginTest() {
+
         driver.get("https://mwstraining.com/");
-        
-        // enter mail
+
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
+        // Enter Email
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//input[@placeholder='Enter Email']"))).sendKeys("ashishappnox1@gmail.com");
-        
-        // enter password
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Ashish@567");
-		
-				// click on login button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[3]/button"))).click();
-	}
+                By.xpath("//input[@placeholder='Enter Email']")))
+                .sendKeys("ashishappnox1@gmail.com");
 
+        // Enter Password
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//input[@placeholder='••••••••']")))
+                .sendKeys("Ashish@567");
+
+        // Click Login Button
+        wait.until(ExpectedConditions.elementToBeClickable(
+                By.xpath("//*[@id='root']/div[1]/div/div/div[1]/div/div/form/div[3]/button")))
+                .click();
+
+        System.out.println("Login Successful");
+    }
+
+    @AfterMethod
+    public void tearDown() {
+
+        if (driver != null) {
+
+            driver.quit();
+        }   
+    }  
 }
