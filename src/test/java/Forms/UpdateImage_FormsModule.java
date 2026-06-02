@@ -73,7 +73,7 @@ ChromeDriver driver = new ChromeDriver();
 		        
 		        // click on save button
 		        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[4]/button[2]"))).click();
-		        Thread.sleep(3000);
+		        Thread.sleep(5000);
 		        
 		        // click on edit button
 		        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[2]/div/div/table/tbody/tr[1]/td[5]/div/button[2]"))).click();
