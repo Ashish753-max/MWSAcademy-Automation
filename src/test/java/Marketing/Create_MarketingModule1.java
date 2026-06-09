@@ -36,7 +36,7 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[3]/button"))).click();
 		
 		// click on marketing section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[7]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[8]/button"))).click();
 		
 		// click on create button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
@@ -62,17 +62,17 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div/div/div[2]/div[1]"))).sendKeys("OpenAI was founded in December 2015 by a group of prominent tech leaders, most notably Sam Altman, Elon Musk, Greg Brockman, and Ilya SutskeveOpenAI is an AI research and deployment company. Our mission is to ensure that artificial general intelligence benefits all of humanity.");
 		
-		 // 2. Explicitly wait until the file input element is present in the DOM
+	/*	 // 2. Explicitly wait until the file input element is present in the DOM
         WebElement fileInput = wait.until(
             ExpectedConditions.presenceOfElementLocated(By.cssSelector("input[type='file']"))
         );
 
         // 3. Provide the absolute path to your image
         File file = new File("C:\\Users\\user\\Downloads\\download (3).jpg");
-        fileInput.sendKeys(file.getAbsolutePath());
+        fileInput.sendKeys(file.getAbsolutePath());     */
         
         // click on save button
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[4]/button[2]"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[3]/button[2]"))).click();
 
 	}
 

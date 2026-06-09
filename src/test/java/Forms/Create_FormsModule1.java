@@ -36,7 +36,7 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[3]/button"))).click();
 		
 		// click on Forms section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[8]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[9]/button"))).click();
 		
 		// click on create form button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
@@ -61,17 +61,17 @@ ChromeDriver driver = new ChromeDriver();
 				wait.until(ExpectedConditions.visibilityOfElementLocated(
 						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div/div/div[2]/div[1]"))).sendKeys("Google Antigravity is an AI-powered, agent-driven integrated development environment (IDE) designed to let users build software, UI, and workflows by instructing autonomous AI agents rather than writing code manually");
 				
-				 // 2. Explicitly wait until the file input element is present in the DOM
+			/*	 // 2. Explicitly wait until the file input element is present in the DOM
 		        WebElement fileInput = wait.until(
 		            ExpectedConditions.presenceOfElementLocated(By.cssSelector("input[type='file']"))
 		        );
 
 		        // 3. Provide the absolute path to your image
 		        File file = new File("C:\\Users\\user\\Downloads\\download (2).png");
-		        fileInput.sendKeys(file.getAbsolutePath());
+		        fileInput.sendKeys(file.getAbsolutePath());    */
 		        
 		        // click on save button
-		        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[4]/button[2]"))).click();
+		        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[3]/button[2]"))).click();
 
 	}
 
