@@ -8,10 +8,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Create_Company {
+public class Remove_CompanyLogo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		
 ChromeDriver driver = new ChromeDriver();
         
@@ -75,6 +76,10 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on save button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[3]/button[2]"))).click();
+		
+		// click on edit button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/table/tbody/tr[1]/td[5]/div/button[2]"))).click();
+
 	}
 
 }
