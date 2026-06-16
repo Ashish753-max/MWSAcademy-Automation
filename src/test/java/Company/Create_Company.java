@@ -32,7 +32,7 @@ ChromeDriver driver = new ChromeDriver();
 				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Ashish@567");
 		
 				// click on login button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[3]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Companies section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[6]/button"))).click();
@@ -71,7 +71,7 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// enter product description
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div/div[2]/textarea"))).sendKeys("Claude is an AI assistant developed by Anthropic, designed to be helpful, harmless, and honest. It is built using Anthropic's research in AI safety and is intended to assist users with a wide range of tasks while adhering to ethical guidelines.");
+				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div/div[2]/div[2]/textarea"))).sendKeys("Claude is an AI assistant developed by Anthropic, designed to be helpful, harmless, and honest. It is built using Anthropic's research in AI safety and is intended to assist users with a wide range of tasks while adhering to ethical guidelines.");
 		
 		// click on save button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[3]/button[2]"))).click();
