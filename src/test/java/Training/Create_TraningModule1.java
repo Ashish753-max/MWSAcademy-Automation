@@ -69,7 +69,7 @@ ChromeDriver driver = new ChromeDriver();
 
 		        // 3. Provide the absolute path to your image
 		        File file = new File("C:\\Users\\user\\Downloads\\download (1).png");
-		        fileInput.sendKeys(file.getAbsolutePath());    */
+		        fileInput.sendKeys(file.getAbsolutePath());    */  
 		        
 		        // click on save button
 		        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[3]/button[2]"))).click();
