@@ -71,7 +71,7 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// enter product description
 			// Corrected Code
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div/div[2]/div[2]/textarea"))).sendKeys("Palantir AIP is an AI-powered platform that enables organizations to integrate, analyze, and visualize large-scale data for informed decision-making. It provides advanced analytics, machine learning capabilities, and customizable workflows to help users extract insights from complex datasets. Palantir AIP is designed for both government and commercial applications, supporting a wide range of industries in leveraging data-driven strategies.");
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("Palantir AIP is an AI-powered platform that enables organizations to integrate, analyze, and visualize large-scale data for informed decision-making. It provides advanced analytics, machine learning capabilities, and customizable workflows to help users extract insights from complex datasets. Palantir AIP is designed for both government and commercial applications, supporting a wide range of industries in leveraging data-driven strategies.");
 
 		
 		// click on save button
