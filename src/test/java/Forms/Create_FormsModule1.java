@@ -4,6 +4,7 @@ import java.io.File;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -42,11 +43,17 @@ ChromeDriver driver = new ChromeDriver();
 						wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
 						Thread.sleep(2000);
 		
-		// click on dropdown to select the course
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/div[1]/div/select"))).click();
-		
-		// click on select the form
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
+						// Open dropdown
+						WebElement dropdown=wait.until(ExpectedConditions.elementToBeClickable(
+						    By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/div[1]/div/select")))
+						    ;
+						dropdown.click();
+						
+
+						// Click FORMS option
+						dropdown.sendKeys(Keys.ARROW_DOWN);
+						dropdown.sendKeys(Keys.ARROW_DOWN); // move to FORMS
+						dropdown.sendKeys(Keys.ENTER);
 		
 		//click on target company	
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/button"))).click();
