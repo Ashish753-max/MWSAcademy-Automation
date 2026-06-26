@@ -45,8 +45,8 @@ ChromeDriver driver = new ChromeDriver();
 		
 						// Open dropdown
 						WebElement dropdown=wait.until(ExpectedConditions.elementToBeClickable(
-						    By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/div[1]/div/select")))
-						    ;
+						    By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/div[1]/div/select")));
+						    
 						dropdown.click();
 						
 
