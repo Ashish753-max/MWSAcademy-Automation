@@ -58,9 +58,7 @@ ChromeDriver driver = new ChromeDriver();
 		//click on target company	
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/button"))).click();
 				
-				wait.until(ExpectedConditions.elementToBeClickable(
-					    By.xpath("//*[normalize-space()='FORMS']")))
-					    .click();
+				
 				
 				// select target company
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/div/div[2]/div/button[1]"))).click();

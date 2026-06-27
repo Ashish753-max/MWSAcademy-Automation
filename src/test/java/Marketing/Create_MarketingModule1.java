@@ -4,6 +4,7 @@ import java.io.File;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -38,9 +39,20 @@ ChromeDriver driver = new ChromeDriver();
 		// click on marketing section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[8]/button"))).click();
 		
-		// click on create button
+		// click on add courses button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
 		Thread.sleep(2000);
+		
+		// Open dropdown
+		WebElement dropdown=wait.until(ExpectedConditions.elementToBeClickable(
+		    By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/div[1]/div/select")));
+		    
+		dropdown.click();
+		
+
+		// Click FORMS option
+		dropdown.sendKeys(Keys.ARROW_DOWN); // move to FORMS
+		dropdown.sendKeys(Keys.ENTER);
 		
 		//click on target company	
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/button"))).click();
