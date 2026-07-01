@@ -1,13 +1,15 @@
 package Profile;
 
+import java.io.File;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Remove_ProfileImage {
+public class Update_ProfileImage {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
@@ -21,7 +23,7 @@ ChromeDriver driver = new ChromeDriver();
         driver.get("https://mwstraining.com/");
         
         // enter mail
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//input[@placeholder='Enter Email']"))).sendKeys("ashishappnox1@gmail.com");
@@ -44,12 +46,23 @@ ChromeDriver driver = new ChromeDriver();
 		//click on profile image
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[1]/div/div[2]/div[1]/div/div[2]/button"))).click();
 		
-		// click on remove image button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[1]/div/div[2]/div[1]/div/div[2]/div[2]/button[2]"))).click();
+		// click on Update image button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[1]/div/div[2]/div[1]/div/div[2]/div[2]/button[1]"))).click();
 		Thread.sleep(2000);
 		
-		// click on save button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/button[2]"))).click();
+		WebElement fileInput = wait.until(
+	            ExpectedConditions.presenceOfElementLocated(By.cssSelector("input[type='file']"))
+	        );
+
+	        // 3. Provide the absolute path to your image
+	        File file = new File("C:\\Users\\user\\Downloads\\0e7e7c06e1cdb9d84ecb0787f0f1efdf.png");
+	        fileInput.sendKeys(file.getAbsolutePath());
+	        Thread.sleep(3000);
+	        
+	        
+	        // click on save button
+	        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/button[2]"))).click();
+		
 		
 		
 
