@@ -35,7 +35,7 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Course section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[8]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[10]/button"))).click();
 		
 		// click on add course button
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
@@ -55,11 +55,11 @@ ChromeDriver driver = new ChromeDriver();
 				
 				//Resource title
 				wait.until(ExpectedConditions.visibilityOfElementLocated(
-						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/div[2]/input"))).sendKeys("Palantir Artificial Intelligence Platform ");
+						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/div/input"))).sendKeys("Palantir Artificial Intelligence Platform ");
 				
 				// Enter description
 				wait.until(ExpectedConditions.visibilityOfElementLocated(
-						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div/div/div[2]/div[1]"))).sendKeys(" A comprehensive suite of tools that connects generative AI with enterprise data and operations. It empowers developers and frontline users to build production-ready AI workflows, agents, and applications on top of the Palantir Ontology, seamlessly integrating AI within strict security and governance frameworks.");
+						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys(" A comprehensive suite of tools that connects generative AI with enterprise data and operations. It empowers developers and frontline users to build production-ready AI workflows, agents, and applications on top of the Palantir Ontology, seamlessly integrating AI within strict security and governance frameworks.");
 				
 		/*		 // 2. Explicitly wait until the file input element is present in the DOM
 		        WebElement fileInput = wait.until(
