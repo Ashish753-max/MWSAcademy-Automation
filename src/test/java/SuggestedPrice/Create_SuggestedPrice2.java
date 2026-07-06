@@ -9,11 +9,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Create_SuggestedPrice {
+public class Create_SuggestedPrice2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 		
 ChromeDriver driver = new ChromeDriver();
         
@@ -48,29 +47,28 @@ ChromeDriver driver = new ChromeDriver();
 		// select the company from the dropdown
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div/div/div[2]/div/button[1]"))).click();
 		
-		// enter the title
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/input"))).sendKeys("Price for marketing books");
-		
-		// enter the description
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[3]/div/div/div[2]/div[1]"))).sendKeys("Marketing book descriptions explain what a book is about. They act like a pitch to grab attention. A good description highlights the target audience, the core business problem it solves, and the lessons learned.");
-		
-		// enter the image
-		WebElement fileInput = wait.until(
-	            ExpectedConditions.presenceOfElementLocated(By.cssSelector("input[type='file']"))
-	        );
+		// enter title
+				wait.until(ExpectedConditions.visibilityOfElementLocated(
+						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/input"))).sendKeys("Automation");
+				
+				// enter description
+				wait.until(ExpectedConditions.visibilityOfElementLocated(
+						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[3]/div/div/div[2]/div[1]"))).sendKeys("Automation is the use of technology, software, and control systems to perform tasks with minimal human intervention. It optimizes workflows, reduces operational costs, and minimizes errors in repetitive processes. Common types range from industrial robotics to digital business process automation.");
+				
+				// click on video section
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[4]/div[1]/button[2]"))).click();
+				
+				// upload video
+				WebElement fileInput = wait.until(
+			            ExpectedConditions.presenceOfElementLocated(By.cssSelector("input[type='file']"))
+			        );
 
-	        // 3. Provide the absolute path to your image
-	        File file = new File("C:\\Users\\user\\Downloads\\images (5).jpg");
-	        fileInput.sendKeys(file.getAbsolutePath());
-	        
-	        // click on the save button
-	        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/button[2]"))).click();
-	        
-		
-		
-		
+			        // 3. Provide the absolute path to your video
+			        File file = new File("C:\\Users\\user\\Downloads\\test.mp4");
+			        fileInput.sendKeys(file.getAbsolutePath());
+			        
+			        // click on save button
+			        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/button[2]"))).click();
 
 	}
 
