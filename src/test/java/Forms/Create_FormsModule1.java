@@ -37,13 +37,13 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Course section
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[8]/button"))).click();
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[10]/button"))).click();
 				
 				// click on add course button
 						wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
 						Thread.sleep(2000);
 		
-						// Open dropdown
+				/*		// Open dropdown
 						WebElement dropdown=wait.until(ExpectedConditions.elementToBeClickable(
 						    By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/div[1]/div/select")));
 						    
@@ -53,7 +53,7 @@ ChromeDriver driver = new ChromeDriver();
 						// Click FORMS option
 						dropdown.sendKeys(Keys.ARROW_DOWN);
 						dropdown.sendKeys(Keys.ARROW_DOWN); // move to FORMS
-						dropdown.sendKeys(Keys.ENTER);
+						dropdown.sendKeys(Keys.ENTER);    */
 		
 		//click on target company	
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/button"))).click();
@@ -71,11 +71,11 @@ ChromeDriver driver = new ChromeDriver();
 				
 				//Resource title
 				wait.until(ExpectedConditions.visibilityOfElementLocated(
-						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/div[2]/input"))).sendKeys("Antigravity");
+						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/div/input"))).sendKeys("Antigravity");
 				
 				// Enter description
 				wait.until(ExpectedConditions.visibilityOfElementLocated(
-						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div/div/div[2]/div[1]"))).sendKeys("Google Antigravity is an AI-powered, agent-driven integrated development environment (IDE) designed to let users build software, UI, and workflows by instructing autonomous AI agents rather than writing code manually");
+						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("Google Antigravity is an AI-powered, agent-driven integrated development environment (IDE) designed to let users build software, UI, and workflows by instructing autonomous AI agents rather than writing code manually");
 				
 			/*	 // 2. Explicitly wait until the file input element is present in the DOM
 		        WebElement fileInput = wait.until(
