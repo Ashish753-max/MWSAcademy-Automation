@@ -1,4 +1,4 @@
-package Company;
+package Profile;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,10 +13,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
 
-public class Search_Company {
+public class Update_ProfileName {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
+		
 		
 ChromeDriver driver = new ChromeDriver();
         
@@ -39,20 +40,26 @@ ChromeDriver driver = new ChromeDriver();
 				// click on login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
-		// click on Companies section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[6]/button"))).click();
+		// click on profile icon
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[12]/button"))).click();
 		
-		// click on search field 
+		
+		
+		// click on edit button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
+		
+		//remove name
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/div"))).click();
+				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div/div/div[2]/div[1]/div/input"))).clear();
 		
-		// enter company name in search field
+		// enter new name
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Black");
-		
+				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div/div/div[2]/div[1]/div/input"))).sendKeys("Abhi");
 		Thread.sleep(2000);
+		// click on save button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/button[2]"))).click();
 		
-		 // Create screenshots folder if it doesn't exist
+		// // Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");
         if (!screenshotsFolder.exists()) {
             screenshotsFolder.mkdirs();
@@ -61,10 +68,11 @@ ChromeDriver driver = new ChromeDriver();
         // Take screenshot with the file name
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-        String screenshotPath = "screenshots/Search_Company.png";
+        String screenshotPath = "screenshots/Update_ProfileName.png";
         Files.copy(srcFile, new File(screenshotPath));
         
         System.out.println("Screenshot saved at: " + screenshotPath);
+
 
 	}
 

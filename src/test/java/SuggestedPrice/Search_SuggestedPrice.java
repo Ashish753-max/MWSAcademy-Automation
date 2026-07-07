@@ -1,21 +1,15 @@
-package Company;
+package SuggestedPrice;
 
-import java.io.File;
-import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.google.common.io.Files;
+public class Search_SuggestedPrice {
 
-public class Search_Company {
-
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -27,7 +21,7 @@ ChromeDriver driver = new ChromeDriver();
         driver.get("https://mwstraining.com/");
         
         // enter mail
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//input[@placeholder='Enter Email']"))).sendKeys("ashishappnox1@gmail.com");
@@ -39,32 +33,17 @@ ChromeDriver driver = new ChromeDriver();
 				// click on login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
-		// click on Companies section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[6]/button"))).click();
+		// click on suggested price section
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[8]/button"))).click();
 		
-		// click on search field 
+		// click on search field
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/div"))).click();
 		
 		// enter company name in search field
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Black");
+				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Java");
 		
-		Thread.sleep(2000);
-		
-		 // Create screenshots folder if it doesn't exist
-        File screenshotsFolder = new File("screenshots");
-        if (!screenshotsFolder.exists()) {
-            screenshotsFolder.mkdirs();
-        }
-        
-        // Take screenshot with the file name
-        TakesScreenshot screenshot = (TakesScreenshot) driver;
-        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-        String screenshotPath = "screenshots/Search_Company.png";
-        Files.copy(srcFile, new File(screenshotPath));
-        
-        System.out.println("Screenshot saved at: " + screenshotPath);
 
 	}
 

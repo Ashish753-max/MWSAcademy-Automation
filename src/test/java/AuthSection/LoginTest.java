@@ -50,6 +50,8 @@ public class LoginTest {
 
         System.out.println("Login Successful");
     }
+    
+    
 
     @AfterMethod
     public void tearDown() {
@@ -59,4 +61,5 @@ public class LoginTest {
             driver.quit();
         }   
     }  
+    
 }
