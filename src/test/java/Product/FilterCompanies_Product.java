@@ -1,4 +1,4 @@
-package Company;
+package Product;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,9 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
 
-public class View_CompanyDetails1 {
+public class FilterCompanies_Product {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -39,14 +39,16 @@ ChromeDriver driver = new ChromeDriver();
 				// click on login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
-		// click on Companies section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[6]/button"))).click();
+		// click on Product section
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[7]/button"))).click();
 		
-		// click on view details button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr/td[5]/div/button[1]"))).click();
+		// click on All companies filter button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/div/div/div/div/button"))).click();
 		
-		Thread.sleep(4000); // Wait for 2 seconds to ensure the page is fully loaded
-		 // Create screenshots folder if it doesn't exist
+		// select a company from the dropdown
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/div/div/div/div/div/div[2]/div/button[2]"))).click();
+		
+		// Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");
         if (!screenshotsFolder.exists()) {
             screenshotsFolder.mkdirs();
@@ -55,12 +57,10 @@ ChromeDriver driver = new ChromeDriver();
         // Take screenshot with the file name
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-        String screenshotPath = "screenshots/View_CompanyDetails1.png";
+        String screenshotPath = "screenshots/FilterCompanies_Product.png";
         Files.copy(srcFile, new File(screenshotPath));
         
         System.out.println("Screenshot saved at: " + screenshotPath);
-		
-		
 
 	}
 

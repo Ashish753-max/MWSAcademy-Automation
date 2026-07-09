@@ -99,7 +99,7 @@ ChromeDriver driver = new ChromeDriver();
 
 		
 		// click on save button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[5]/div/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[3]/div/button[2]"))).click();
 		
 		 // Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");

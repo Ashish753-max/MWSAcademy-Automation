@@ -80,7 +80,7 @@ ChromeDriver driver = new ChromeDriver();
 				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("Claude is an AI assistant developed by Anthropic, designed to be helpful, harmless, and honest. It is built using Anthropic's research in AI safety and is intended to assist users with a wide range of tasks while adhering to ethical guidelines.");
 		
 		// click on save button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[5]/div/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[3]/div/button[2]"))).click();
 		
 		Thread.sleep(3000);  // Wait for 2 seconds to ensure the page has loaded before taking the screenshot
 		
