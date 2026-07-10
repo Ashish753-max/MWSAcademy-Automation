@@ -1,4 +1,4 @@
-# 🚀 MWS Academy - Automation Testing Framework
+# 🚀 MWS Academy - Automation Framework
 
 <p align="center">
 
