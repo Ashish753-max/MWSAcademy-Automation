@@ -371,15 +371,7 @@ Typical reports include:
 
 
 
-### Skills
 
-- Java
-- Selenium WebDriver
-- TestNG
-- Maven
-- Git & GitHub
-- Jenkins CI/CD
-- Automation Testing
 
 ---
 
