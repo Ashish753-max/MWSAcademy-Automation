@@ -15,7 +15,7 @@ import com.google.common.io.Files;
 
 public class FilterCompanies_Product {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -48,6 +48,7 @@ ChromeDriver driver = new ChromeDriver();
 		// select a company from the dropdown
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/div/div/div/div/div/div[2]/div/button[2]"))).click();
 		
+		Thread.sleep(2000); // Wait for 2 seconds to allow the filter to apply
 		// Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");
         if (!screenshotsFolder.exists()) {

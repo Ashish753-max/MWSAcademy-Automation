@@ -1,17 +1,22 @@
 package SuggestedPrice;
 
 import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.google.common.io.Files;
+
 public class Create_SuggestedPrice3 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
 		
@@ -43,10 +48,16 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
 		
 		// click on the select company dropdown
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/button"))).click();
 		
 		// select the company from the dropdown
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div/div/div[2]/div/button[1]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/div/div[2]/div/button[3]"))).click();
+		
+		// click on device dropdown
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[2]/div/button"))).click();
+		
+		// select the device from the dropdown
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[2]/div/div/div[2]/div/button"))).click();
 		
 		// enter title
 				wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -70,6 +81,20 @@ ChromeDriver driver = new ChromeDriver();
 			        
 			        // click on save button
 			        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/button[2]"))).click();
+			        Thread.sleep(4000); // Wait for 2 seconds to ensure the screenshot captures the final state
+			     // Create screenshots folder if it doesn't exist
+			        File screenshotsFolder = new File("screenshots");
+			        if (!screenshotsFolder.exists()) {
+			            screenshotsFolder.mkdirs();
+			        }
+			        
+			        // Take screenshot with the file name
+			        TakesScreenshot screenshot = (TakesScreenshot) driver;
+			        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+			        String screenshotPath = "screenshots/Create_SuggestedPrice3.png";
+			        Files.copy(srcFile, new File(screenshotPath));
+			        
+			        System.out.println("Screenshot saved at: " + screenshotPath);
 
 	}
 

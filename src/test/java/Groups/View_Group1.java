@@ -1,15 +1,21 @@
 package Groups;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Create_Group {
+import com.google.common.io.Files;
 
-	public static void main(String[] args) {
+public class View_Group1 {
+
+	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -36,19 +42,22 @@ ChromeDriver driver = new ChromeDriver();
 		// click on Groups section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[5]/button"))).click();
 		
-		// click on create group button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
-		
-		// enter group name
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[1]/div[1]/input"))).sendKeys("Machine Learning Group");
-		
-		// enter group description
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("Machine learning is a subset of artificial intelligence where algorithms analyze large datasets to recognize patterns. Instead of being explicitly programmed with hard-coded rules, these systems \"learn\" from experience, allowing them to make accurate predictions, decisions, or generate content on new, unseen data.");
-		
-		// click on create button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/button[2]"))).click();
+		// click on view group button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[4]/div/button[1]"))).click();
+		Thread.sleep(8000);
+		// Create screenshots folder if it doesn't exist
+        File screenshotsFolder = new File("screenshots");
+        if (!screenshotsFolder.exists()) {
+            screenshotsFolder.mkdirs();
+        }
+        
+        // Take screenshot with the file name
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+        String screenshotPath = "screenshots/View_Group1.png";
+        Files.copy(srcFile, new File(screenshotPath));
+        
+        System.out.println("Screenshot saved at: " + screenshotPath);
 
 	}
 

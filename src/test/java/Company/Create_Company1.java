@@ -84,7 +84,7 @@ ChromeDriver driver = new ChromeDriver();
 		
 		Thread.sleep(3000);  // Wait for 2 seconds to ensure the page has loaded before taking the screenshot
 		
-		// // Create screenshots folder if it doesn't exist
+		 // Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");
         if (!screenshotsFolder.exists()) {
             screenshotsFolder.mkdirs();

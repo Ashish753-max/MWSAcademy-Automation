@@ -1,15 +1,21 @@
 package SuggestedPrice;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.google.common.io.Files;
+
 public class Delete_SuggestedPrice {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -37,10 +43,24 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[8]/button"))).click();
 		
 		// click on delete button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[5]/div/button[3]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[6]/div/button[3]"))).click();
 		
 		// click on confirm delete button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[2]/button[2]"))).click();
+		Thread.sleep(3000); // Wait for 2 seconds to ensure the deletion is processed
+		// Create screenshots folder if it doesn't exist
+        File screenshotsFolder = new File("screenshots");
+        if (!screenshotsFolder.exists()) {
+            screenshotsFolder.mkdirs();
+        }
+        
+        // Take screenshot with the file name
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+        String screenshotPath = "screenshots/Delete_SuggestedPrice.png";
+        Files.copy(srcFile, new File(screenshotPath));
+        
+        System.out.println("Screenshot saved at: " + screenshotPath);
 
 	}
 
