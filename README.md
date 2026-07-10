@@ -7,6 +7,8 @@
 ![Maven](https://img.shields.io/badge/Maven-Build-red?style=for-the-badge&logo=apachemaven)
 ![Jenkins](https://img.shields.io/badge/Jenkins-CI/CD-blue?style=for-the-badge&logo=jenkins)
 ![GitHub](https://img.shields.io/badge/GitHub-Version_Control-black?style=for-the-badge&logo=github)
+<img src="https://img.shields.io/badge/Claude-AI-purple?style=for-the-badge" />
+<img src="https://img.shields.io/badge/ChatGPT-AI-10A37F?style=for-the-badge&logo=openai" />
 
 </p>
 
