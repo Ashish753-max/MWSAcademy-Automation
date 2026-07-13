@@ -38,6 +38,10 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on edit button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[6]/div/button[2]"))).click();
+		
+		// click on the name field and clear the existing name
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/input"))).clear();
 
 	}
 
