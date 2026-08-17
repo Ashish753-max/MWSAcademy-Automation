@@ -43,8 +43,10 @@ ChromeDriver driver = new ChromeDriver();
 		// click on Course section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[10]/button"))).click();
 		
-		// click on course
+		
+		// select the course from the list
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr"))).click();
+		
 		
 		//click on add lession button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/div/aside/div[5]/button[1]"))).click();

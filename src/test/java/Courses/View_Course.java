@@ -1,4 +1,4 @@
-package MarketingContent;
+package Courses;
 
 import java.time.Duration;
 
@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Edit_MarketingContent {
+public class View_Course {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -33,22 +33,13 @@ ChromeDriver driver = new ChromeDriver();
 				// click on login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
-		// click on marketing content section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[9]/button"))).click();
+		// click on Course section
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[10]/button"))).click();
 		
-		// click on the edit button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[6]/div/button[2]"))).click();
+		// click on the view button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr/td[7]/div/button[1]"))).click();
 		
-		// clear the title field
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/input"))).clear();
 		
-		// enter new title
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/input"))).sendKeys("Updated machine learning fundamentals");
-		
-		// click on the update button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/button[2]"))).click();
 
 	}
 

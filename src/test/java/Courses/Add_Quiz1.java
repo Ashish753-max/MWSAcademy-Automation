@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Add_Quiz1 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -50,6 +50,7 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on generate quiz button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[3]/button[2]"))).click();
+		Thread.sleep(8000);
 		
 		// click on the publish quiz 
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div/button[2]"))).click();

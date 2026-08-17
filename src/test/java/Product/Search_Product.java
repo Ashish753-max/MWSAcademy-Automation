@@ -48,7 +48,7 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// enter product name in search field
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Claude");
+				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Aladdin");
 		Thread.sleep(3000); // Wait for 2 seconds to allow search results to load
 		// Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");
