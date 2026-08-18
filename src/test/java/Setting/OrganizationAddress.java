@@ -1,0 +1,10 @@
+package Setting;
+
+public class OrganizationAddress {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
