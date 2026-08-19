@@ -36,31 +36,32 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Course section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[10]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[7]/button"))).click();
 		
-		// click on course
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr"))).click();
-		
-		//click on add lession button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/div/aside/div[5]/button[1]"))).click();
+		// select the course from the list
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]"))).click();
+				
+				
+				//click on add lession button
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/div/aside/div[5]/button[1]"))).click();
 		
 		// enter Lession title	
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div[1]/div[1]/input"))).sendKeys("Data Science from first principles");
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div[1]/div[1]/input"))).sendKeys("Data Science from first principles");
 		
 		// Enter Lession description
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div[1]/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("Data science from first principles means understanding core concepts by building algorithms and mathematical models from the ground up, rather than relying on high-level libraries. This involves implementing fundamental statistics, linear algebra, and machine learning models using basic programming tools");
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div[1]/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("Data science from first principles means understanding core concepts by building algorithms and mathematical models from the ground up, rather than relying on high-level libraries. This involves implementing fundamental statistics, linear algebra, and machine learning models using basic programming tools");
 		
 		// click on text block 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div/div/button[1]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div/div/button[1]"))).click();
 		
 		// enter text block title
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div[1]/div[2]/div/div/div[2]/div[1]"))).sendKeys("Data science from first principles means mastering the field by building algorithms, mathematical structures, and statistical models entirely from scratch rather than relying on pre-built libraries. By writing your own code for core operations like matrix multiplication, probability distributions, gradient descent, and machine learning models, you uncover the mechanics hidden inside modern software \"black boxes\". This rigorous approach deepens your conceptual understanding, allows you to debug complex failures with precision, and gives you the ultimate flexibility to customize algorithms for highly specialized problems.");
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div[1]/div[2]/div/div/div[2]/div[1]"))).sendKeys("Data science from first principles means mastering the field by building algorithms, mathematical structures, and statistical models entirely from scratch rather than relying on pre-built libraries. By writing your own code for core operations like matrix multiplication, probability distributions, gradient descent, and machine learning models, you uncover the mechanics hidden inside modern software \"black boxes\". This rigorous approach deepens your conceptual understanding, allows you to debug complex failures with precision, and gives you the ultimate flexibility to customize algorithms for highly specialized problems.");
 		
 		// click on Video block
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div/div/button[3]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div[2]/div/button[3]"))).click();
 		
 		// enter Video block title
 		WebElement fileInput = wait.until(
@@ -72,7 +73,7 @@ ChromeDriver driver = new ChromeDriver();
 	        fileInput.sendKeys(file.getAbsolutePath());
 	        
 	        // click on save button
-	        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[1]/div/button[2]"))).click();
+	        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[1]/div/button[2]"))).click();
 
 	}
 

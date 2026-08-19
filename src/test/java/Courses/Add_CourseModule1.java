@@ -41,33 +41,33 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Course section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[10]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[7]/button"))).click();
 		
 		
 		// select the course from the list
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]"))).click();
 		
 		
 		//click on add lession button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/div/aside/div[5]/button[1]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/div/aside/div[5]/button[1]"))).click();
 		
 		// enter Lession title	
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div[1]/div[1]/input"))).sendKeys("Machine learning from first principles");
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div[1]/div[1]/input"))).sendKeys("Machine learning from first principles");
 		
 		// enter Lession description
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div[1]/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("Machine learning from first principles is a comprehensive course that covers the fundamental concepts and techniques of machine learning. This course is designed for beginners who want to learn machine learning from scratch, as well as for experienced practitioners who want to deepen their understanding of the field.");
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div[1]/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("Machine learning from first principles is a comprehensive course that covers the fundamental concepts and techniques of machine learning. This course is designed for beginners who want to learn machine learning from scratch, as well as for experienced practitioners who want to deepen their understanding of the field.");
 		
 		// click on text block 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div/div/button[1]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div/div/button[1]"))).click();
 		
 		// enter text block title
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div[1]/div[2]/div/div/div[2]/div[1]"))).sendKeys("The three primary types of Machine Learning (ML) are Supervised Learning, Unsupervised Learning, and Reinforcement Learning, alongside hybrid approaches like Semi-Supervised and Self-Supervised Learning");
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div[1]/div[2]/div/div/div[2]/div[1]"))).sendKeys("The three primary types of Machine Learning (ML) are Supervised Learning, Unsupervised Learning, and Reinforcement Learning, alongside hybrid approaches like Semi-Supervised and Self-Supervised Learning");
 		
 		// click on image block
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div[2]/div/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div[2]/div[2]/div/button[2]"))).click();
 		
 		// enter image block title
 		WebElement fileInput = wait.until(
@@ -79,7 +79,7 @@ ChromeDriver driver = new ChromeDriver();
 	        fileInput.sendKeys(file.getAbsolutePath());
 	        
 	        // click on save button
-	        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[1]/div/button[2]"))).click();
+	        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[1]/div/button[2]"))).click();
 	        
 	     // Create screenshots folder if it doesn't exist
 	        File screenshotsFolder = new File("screenshots");

@@ -34,15 +34,15 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on suggested price section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[8]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[9]/button"))).click();
 		
 		// click on search field
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/div"))).click();
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/div/div"))).click();
 		
 		// enter company name in search field
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Java");
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Java");
 		
 
 	}

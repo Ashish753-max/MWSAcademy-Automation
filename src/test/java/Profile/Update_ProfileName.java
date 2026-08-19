@@ -40,24 +40,23 @@ ChromeDriver driver = new ChromeDriver();
 				// click on login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
-		// click on profile icon
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[12]/button"))).click();
-		
-		
-		
-		// click on edit button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
+		// click on profile 
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[11]/button"))).click();
+				
+				
+				// click on edit button
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button"))).click();
 		
 		//remove name
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div/div/div[2]/div[1]/div/input"))).clear();
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div/div/div[2]/div[1]/div/input"))).clear();
 		
 		// enter new name
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div/div/div[2]/div[1]/div/input"))).sendKeys("Abhi");
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div/div/div[2]/div[1]/div/input"))).sendKeys("Abhi");
 		Thread.sleep(2000);
 		// click on save button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/div/button[2]"))).click();
 		
 		// // Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");

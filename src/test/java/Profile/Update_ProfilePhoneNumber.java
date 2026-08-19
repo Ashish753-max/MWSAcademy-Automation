@@ -31,26 +31,25 @@ ChromeDriver driver = new ChromeDriver();
 				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Ashish@567");
 		
 				// click on login button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[3]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
-		// click on profile icon
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[10]/button"))).click();
-		
+		// click on profile 
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[11]/button"))).click();
 		
 		
 		// click on edit button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button"))).click();
 		
-		//remove name
+		//remove number from phone number field
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div/div/div[2]/div[3]/div/div/div/div/div[2]/input"))).clear();
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div/div/div[2]/div[4]/div/div/div/div/div[2]/input"))).clear();
 		
-		// enter new name
+		// enter new number
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div[2]/div/div/div[2]/div[3]/div/div/div/div/div[2]/input"))).sendKeys("7068071256");
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[2]/div/div/div[2]/div[4]/div/div/div/div/div[2]/input"))).sendKeys("3219876543");
 		
 		// click on save button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/div/button[2]"))).click();
 
 	}
 
