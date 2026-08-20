@@ -3,7 +3,9 @@ package Roles;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -35,6 +37,16 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on Roles section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[10]/button"))).click();
+		
+		WebElement element = wait.until(
+			    ExpectedConditions.visibilityOfElementLocated(
+			        By.xpath("//*[@id='app-scroll-container']/div/div/div/div[3]/div[2]/div[1]")
+			    )
+			);
+
+			Actions actions = new Actions(driver);
+
+			actions.moveToElement(element).perform();
 
 	}
 
