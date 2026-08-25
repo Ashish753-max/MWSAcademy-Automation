@@ -47,6 +47,12 @@ ChromeDriver driver = new ChromeDriver();
 			Actions actions = new Actions(driver);
 
 			actions.moveToElement(element).perform();
+			
+			// click on delete button
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/div/div[3]/div[2]/div[1]/div[1]/div[2]/button[2]"))).click();
+			
+			// click on confirm delete button
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[2]/button[2]"))).click();
 
 	}
 

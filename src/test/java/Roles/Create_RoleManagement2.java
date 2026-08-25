@@ -45,6 +45,9 @@ ChromeDriver driver = new ChromeDriver();
 				// enter role name
 				wait.until(ExpectedConditions.visibilityOfElementLocated(
 						By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[1]/div[1]/input"))).sendKeys("Head Nurse");
+				
+				// select permissions
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[1]/div[3]/div/div[1]/label"))).click();
 
 	}
 
