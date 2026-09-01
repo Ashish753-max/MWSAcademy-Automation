@@ -1,15 +1,21 @@
 package Roles;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.google.common.io.Files;
+
 public class Search_Role {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -35,6 +41,28 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on Roles section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[10]/button"))).click();
+		
+		// click on search field
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/div/div"))).click();
+		
+		// enter role name in search field
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Nurse");
+		
+		// // Create screenshots folder if it doesn't exist
+        File screenshotsFolder = new File("screenshots");
+        if (!screenshotsFolder.exists()) {
+            screenshotsFolder.mkdirs();
+        }
+        
+        // Take screenshot with the file name
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+        String screenshotPath = "screenshots/Create_RoleManagement1.png";
+        Files.copy(srcFile, new File(screenshotPath));
+        
+        System.out.println("Screenshot saved at: " + screenshotPath);
 
 	}
 
