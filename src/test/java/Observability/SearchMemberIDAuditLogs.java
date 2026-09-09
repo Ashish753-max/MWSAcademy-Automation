@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AuditLog {
+public class SearchMemberIDAuditLogs {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -39,7 +39,9 @@ ChromeDriver driver = new ChromeDriver();
 		// click on Audit Log section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/div/div[1]/div[1]/button[2]"))).click();
 		
-		//
+		// enter the id in the search bar
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/div/div[2]/input"))).sendKeys("6a96596fc8ca002246ad777d");
 
 	}
 
