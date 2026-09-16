@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Observability {
+public class Tenant_View {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -33,8 +33,11 @@ ChromeDriver driver = new ChromeDriver();
 				// click on login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/div/form/button"))).click();
 		
-		// click on observability
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/aside/nav/a[4]"))).click();
+		// click on tenants
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/aside/nav/a[3]"))).click();
+		
+		// click on view button of first tenant
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/div/main/div/div/div[3]/div[1]/div[1]/table/tbody/tr[1]/td[6]/div/div/div[2]/button"))).click();
 
 	}
 

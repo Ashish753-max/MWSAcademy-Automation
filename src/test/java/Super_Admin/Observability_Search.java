@@ -7,10 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Observability {
+public class Observability_Search {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		
 ChromeDriver driver = new ChromeDriver();
         
@@ -35,6 +36,11 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on observability
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/aside/nav/a[4]"))).click();
+		
+		// click on search field and enter the request id 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+		        By.xpath("//input[@placeholder='Filter by Request ID…']")
+		)).sendKeys("158b066c-5bd6-47d6-babd-ef036398a407");
 
 	}
 

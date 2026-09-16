@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Observability {
+public class Observability_View {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -35,6 +35,9 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on observability
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/aside/nav/a[4]"))).click();
+		
+		// click on view button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/div/main/div/div/div[2]/div/div[2]/div[1]/table/tbody/tr[22]/td[9]/div/div/div/button"))).click();
 
 	}
 

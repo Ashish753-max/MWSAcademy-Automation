@@ -33,6 +33,9 @@ ChromeDriver driver = new ChromeDriver();
 		
 				// click on login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/div/form/button"))).click();
+		
+		// click on tenants
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/aside/nav/a[3]"))).click();
 
 	}
 
