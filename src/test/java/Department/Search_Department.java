@@ -1,4 +1,4 @@
-package Groups;
+package Department;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,10 +13,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
 
-public class View_Group1 {
+public class Search_Department {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
+		
 		
 ChromeDriver driver = new ChromeDriver();
         
@@ -42,9 +43,14 @@ ChromeDriver driver = new ChromeDriver();
 		// click on Groups section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[5]/button"))).click();
 		
-		// click on view group button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[4]/div/button[1]"))).click();
-		Thread.sleep(8000);
+		// click on search field  
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/div"))).click();
+		
+		// enter group name in search field
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Machine Learning");
+		Thread.sleep(3000);
 		// Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");
         if (!screenshotsFolder.exists()) {
@@ -54,7 +60,7 @@ ChromeDriver driver = new ChromeDriver();
         // Take screenshot with the file name
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-        String screenshotPath = "screenshots/View_Group1.png";
+        String screenshotPath = "screenshots/Search_Group.png";
         Files.copy(srcFile, new File(screenshotPath));
         
         System.out.println("Screenshot saved at: " + screenshotPath);

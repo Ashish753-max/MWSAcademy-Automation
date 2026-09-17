@@ -1,4 +1,4 @@
-package Groups;
+package Department;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,9 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
 
-public class View_Group2 {
+public class Delete_Department {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -40,11 +40,14 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Groups section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[5]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[4]/button"))).click();
 		
-		// click on view group button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[2]/td[4]/div/button[1]"))).click();
-		Thread.sleep(8000);
+		// click on delete button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr/td[4]/div/button[3]"))).click();
+		
+		// click on confirm delete button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[2]/button[2]"))).click();
+		Thread.sleep(2000);
 		
 		// Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");
@@ -55,7 +58,7 @@ ChromeDriver driver = new ChromeDriver();
         // Take screenshot with the file name
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-        String screenshotPath = "screenshots/View_Group2.png";
+        String screenshotPath = "screenshots/Delete_Group.png";
         Files.copy(srcFile, new File(screenshotPath));
         
         System.out.println("Screenshot saved at: " + screenshotPath);

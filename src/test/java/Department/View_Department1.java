@@ -1,15 +1,21 @@
-package Groups;
+package Department;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Update_GroupDescription {
+import com.google.common.io.Files;
 
-	public static void main(String[] args) throws InterruptedException {
+public class View_Department1 {
+
+	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -36,20 +42,22 @@ ChromeDriver driver = new ChromeDriver();
 		// click on Groups section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[5]/button"))).click();
 		
-		// click on edit button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[4]/div/button[2]"))).click();
+		// click on view group button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[4]/div/button[1]"))).click();
+		Thread.sleep(8000);
+		// Create screenshots folder if it doesn't exist
+        File screenshotsFolder = new File("screenshots");
+        if (!screenshotsFolder.exists()) {
+            screenshotsFolder.mkdirs();
+        }
         
-		//click on description field and update the description
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[2]/div[2]/div/div[2]/div[1]"))).clear();
-		Thread.sleep(2000);
-		
-		// enter new description
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("update description of machine leaning course ");
-		
-		// click on save button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/button[2]"))).click();
+        // Take screenshot with the file name
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+        String screenshotPath = "screenshots/View_Group1.png";
+        Files.copy(srcFile, new File(screenshotPath));
+        
+        System.out.println("Screenshot saved at: " + screenshotPath);
 
 	}
 

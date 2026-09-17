@@ -1,4 +1,4 @@
-package Groups;
+package Department;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,9 +13,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
 
-public class Create_Group2 {
+public class Create_Department1 {
 
-	public static void main(String[] args) throws InterruptedException, IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -40,22 +40,36 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Groups section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[5]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[4]/button"))).click();
 		
 		// click on create group button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button"))).click();
 		
 		// enter group name
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[1]/div[1]/input"))).sendKeys("Algorithms Group");
+				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[1]/div[1]/input"))).sendKeys("Machine Learning Group");
 		
+		// click on the department type 
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[1]/div[2]/div/div/button"))).click();
+		
+		// click on add 
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[1]/div[2]/div/div/div/div/div/button"))).click();
+		
+/*		// enter department name
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("/html/body/div[3]/div/div[3]/div[1]/input"))).sendKeys("College of Engineering");
+		
+		// click on save button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div[3]/div[3]/button[2]"))).click();
+		*/
 		// enter group description
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("An algorithm is a finite, step-by-step set of well-defined instructions designed to solve a specific problem or perform a task. Think of it as a logical roadmap: it takes an input (the starting data), processes it through a sequence of clear operations, and delivers an output (the final solution).");
+				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("Machine learning is a subset of artificial intelligence where algorithms analyze large datasets to recognize patterns. Instead of being explicitly programmed with hard-coded rules, these systems \"learn\" from experience, allowing them to make accurate predictions, decisions, or generate content on new, unseen data.");
 		
 		// click on create button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/button[2]"))).click();
-		Thread.sleep(4000);
+		Thread.sleep(3000);
+		
 		// Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");
         if (!screenshotsFolder.exists()) {
@@ -65,7 +79,7 @@ ChromeDriver driver = new ChromeDriver();
         // Take screenshot with the file name
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-        String screenshotPath = "screenshots/Create_Group2.png";
+        String screenshotPath = "screenshots/Create_Group1.png";
         Files.copy(srcFile, new File(screenshotPath));
         
         System.out.println("Screenshot saved at: " + screenshotPath);
