@@ -41,7 +41,7 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on marketing content section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[8]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[11]/button"))).click();
 		
 		// click on create button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button"))).click();
@@ -68,7 +68,7 @@ ChromeDriver driver = new ChromeDriver();
 				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[3]/div/div/div[2]/div[1]"))).sendKeys("Object-Oriented Programming (OOP) in Java is a development paradigm that organizes software design around data, or objects, rather than functions and logic. Java is a class-based language, meaning that every piece of running code must be bundled within a class template");
 		
 		// click on Document section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[4]/div[1]/button[3]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[4]/div[2]/button[3]"))).click();
 		
 		// upload Document
 		WebElement fileInput = wait.until(

@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Create_SOP2 {
+public class Unarchive_SOP {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -36,8 +36,14 @@ ChromeDriver driver = new ChromeDriver();
 		// click on SOP Library section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='SOP Library']"))).click();
 		
-		// click on create SOP button
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button"))).click();
+		// click on archive section
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/div/div[2]/div[1]/button[2]"))).click();
+		
+		// click on action button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[1]/div/div/div/table/tbody/tr/td[7]/div/div/button"))).click();
+		
+		// click on restore button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[1]/div/div/div/table/tbody/tr/td[7]/div/div/div/button[1]"))).click();
 
 	}
 
