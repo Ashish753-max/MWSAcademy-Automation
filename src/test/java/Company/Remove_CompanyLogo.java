@@ -43,8 +43,11 @@ ChromeDriver driver = new ChromeDriver();
 		// click on Companies section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Companies']"))).click();
 		
+		// click on action button
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[5]/div/div/button"))).click();
+		
 		// click on edit button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[5]/div/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/button[2]"))).click();
 		
 		// click on remove logo button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div/button"))).click();

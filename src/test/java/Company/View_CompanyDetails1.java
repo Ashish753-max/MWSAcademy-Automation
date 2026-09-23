@@ -42,8 +42,11 @@ ChromeDriver driver = new ChromeDriver();
 		// click on Companies section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Companies']"))).click();
 		
+		// click on action button
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[5]/div/div/button"))).click();
+		
 		// click on view details button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr/td[5]/div/button[1]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/button[1]"))).click();
 		
 		Thread.sleep(4000); // Wait for 2 seconds to ensure the page is fully loaded
 		 // Create screenshots folder if it doesn't exist

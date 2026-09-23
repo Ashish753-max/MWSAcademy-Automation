@@ -1,4 +1,4 @@
-package Product;
+package Device;
 
 import java.io.File;
 import java.io.IOException;

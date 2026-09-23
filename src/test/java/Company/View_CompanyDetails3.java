@@ -42,8 +42,11 @@ ChromeDriver driver = new ChromeDriver();
 		// click on Companies section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Companies']"))).click();
 		
-		// click on view details button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[3]/td[5]/div/button[1]"))).click();
+		// click on action button
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[3]/td[5]/div/div/button"))).click();
+				
+				// click on view details button
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/button[1]"))).click();
 		
 		Thread.sleep(2000); // Wait for 2 seconds to ensure the page is fully loaded
 		

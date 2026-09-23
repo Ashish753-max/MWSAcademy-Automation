@@ -1,4 +1,4 @@
-package Product;
+package Device;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
 
-public class FilterCompanies_Product {
+public class Search_Product {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
@@ -42,13 +42,14 @@ ChromeDriver driver = new ChromeDriver();
 		// click on Product section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[7]/button"))).click();
 		
-		// click on All companies filter button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/div/div/div/div/button"))).click();
+		// click on search field
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/div"))).click();
 		
-		// select a company from the dropdown
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/div/div/div/div/div/div[2]/div/button[2]"))).click();
-		
-		Thread.sleep(2000); // Wait for 2 seconds to allow the filter to apply
+		// enter product name in search field
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Aladdin");
+		Thread.sleep(3000); // Wait for 2 seconds to allow search results to load
 		// Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");
         if (!screenshotsFolder.exists()) {
@@ -58,7 +59,7 @@ ChromeDriver driver = new ChromeDriver();
         // Take screenshot with the file name
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
-        String screenshotPath = "screenshots/FilterCompanies_Product.png";
+        String screenshotPath = "screenshots/Search_Product.png";
         Files.copy(srcFile, new File(screenshotPath));
         
         System.out.println("Screenshot saved at: " + screenshotPath);

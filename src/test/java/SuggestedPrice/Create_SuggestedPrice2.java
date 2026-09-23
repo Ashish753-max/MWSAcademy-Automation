@@ -67,7 +67,7 @@ ChromeDriver driver = new ChromeDriver();
 						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[3]/div/div/div[2]/div[1]"))).sendKeys("Automation is the use of technology, software, and control systems to perform tasks with minimal human intervention. It optimizes workflows, reduces operational costs, and minimizes errors in repetitive processes. Common types range from industrial robotics to digital business process automation.");
 				
 				// click on video section
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[4]/div[1]/button[2]"))).click();
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[4]/div[2]/button[2]"))).click();
 				
 				// upload video
 				WebElement fileInput = wait.until(
