@@ -51,8 +51,7 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// select company from dropdown
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/div/div[2]/div/button[3]"))).click();
-		
-		
+				
 		// click on the device dropdown
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[2]/div/button"))).click();
 		

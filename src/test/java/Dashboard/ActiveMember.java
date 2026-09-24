@@ -34,7 +34,7 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Active Member 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div[2]/div/div[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div[1]/div[2]/div[2]"))).click();
 
 	}
 

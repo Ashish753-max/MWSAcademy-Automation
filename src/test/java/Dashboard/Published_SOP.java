@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Product {
+public class Published_SOP {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -21,7 +21,7 @@ ChromeDriver driver = new ChromeDriver();
         driver.get("https://mwstraining.com/");
         
         // enter mail
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//input[@placeholder='Enter Email']"))).sendKeys("ashishappnox1@gmail.com");
@@ -33,8 +33,8 @@ ChromeDriver driver = new ChromeDriver();
 				// click on login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
-		// click on product section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div[1]/div/div[2]"))).click();
+		// click on published SOP
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div[1]/div[7]/div[2]"))).click();
 
 	}
 

@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Archived_SOP {
+public class Delete_SOP {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -36,11 +36,17 @@ ChromeDriver driver = new ChromeDriver();
 		// click on SOP Library section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='SOP Library']"))).click();
 		
-		// click on action button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[11]/div/div/button"))).click();
+		// navigate to the archive section
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/div/div[2]/div[1]/button[2]"))).click();
 		
-		// click on archive button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/button"))).click();
+		// click on action button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[1]/div/div/div/table/tbody/tr/td[11]/div/div/button"))).click();
+		
+		// click on delete button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/button[2]"))).click();
+		
+		// click on confirm delete button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[2]/button[2]"))).click();
 
 	}
 

@@ -70,7 +70,7 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/label[2]/input"))).click();
 		
 		// click on create SOP button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[6]/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[7]/button[2]"))).click();
 
 	}
 
