@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Assign_Content {
+public class Search_Assignment {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -35,6 +35,15 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on Assignment section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='New Assignment']"))).click();
+		
+		// click on search field
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/div/div"))).click();
+		
+		
+		// enter search text
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Ashish");
 		
 
 	}

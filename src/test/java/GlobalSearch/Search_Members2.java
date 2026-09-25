@@ -1,4 +1,4 @@
-package NewAssignment;
+package GlobalSearch;
 
 import java.time.Duration;
 
@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Assign_Content {
+public class Search_Members2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -21,7 +21,7 @@ ChromeDriver driver = new ChromeDriver();
         driver.get("https://mwstraining.com/");
         
         // enter mail
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//input[@placeholder='Enter Email']"))).sendKeys("ashishappnox1@gmail.com");
@@ -33,9 +33,9 @@ ChromeDriver driver = new ChromeDriver();
 				// click on login button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
-		// click on Assignment section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='New Assignment']"))).click();
-		
+		// click on search field
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[@id=\"root\"]/div[1]/div[1]/header/div/div[2]/div[1]/input"))).sendKeys("QA");
 
 	}
 

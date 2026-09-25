@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Assign_Content {
+public class Marketing_Filter {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -35,6 +35,10 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on Assignment section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='New Assignment']"))).click();
+		
+		// click on Marketing section
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/div/div[1]/button[3]"))).click();
+		
 		
 
 	}
