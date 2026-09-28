@@ -34,8 +34,9 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Due for Review
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div[1]/div[11]/div[2]"))).click();
+		By dueForReview = By.xpath("//p[normalize-space()='Due for Review']");
 
+		wait.until(ExpectedConditions.elementToBeClickable(dueForReview)).click();
 	}
 
 }
