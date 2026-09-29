@@ -38,6 +38,34 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on create SOP button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button"))).click();
+		
+		// enter sop number
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//input[@placeholder='e.g. FD-014']"))).sendKeys("SOP-003");
+		
+		// click on select category dropdown
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[1]/div[2]/div/div/button"))).click();
+		
+		// select the category from the dropdown
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[1]/div[2]/div/div/div/div[2]/div/button[3]"))).click();
+		
+		// enter the SOP title
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//input[@placeholder='e.g. Late Patient Protocol']"))).sendKeys("How to replace the motherboard");
+		
+		// enter the content in the content box
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[5]/div[2]/div/div[2]/div[1]"))).sendKeys("This SOP explains the steps to replace the motherboard in a computer system.");
+		
+		// click on the checkbox of clinical review
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/label[1]/input"))).click();
+				
+				// click on the checkbox of medical director approval
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/label[2]/input"))).click();
+				
+				// click on create SOP button
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[7]/button[2]"))).click();
 
 	}
 

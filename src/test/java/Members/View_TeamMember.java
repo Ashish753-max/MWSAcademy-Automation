@@ -42,8 +42,11 @@ ChromeDriver driver = new ChromeDriver();
 		// click on Members section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Team Members']"))).click();
 		
+		// click on the action button of the team member
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[7]/div/div/button"))).click();
+		
 		// click on the view button of the team member
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[6]/div/button[1]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/button[1]"))).click();
 		Thread.sleep(4000);
 		
 		// Create screenshots folder if it doesn't exist
