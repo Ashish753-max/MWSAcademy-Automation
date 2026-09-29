@@ -34,7 +34,7 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Checklist section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Checklists']"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Checklist']"))).click();
 
 	}
 

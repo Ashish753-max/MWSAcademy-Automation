@@ -34,7 +34,17 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Checklist section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Checklists']"))).click();
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Checklist']"))).click();
+				
+				
+				
+				// enter the checklist title
+				wait.until(ExpectedConditions.visibilityOfElementLocated(
+						By.xpath("//input[@placeholder='What do you need to do?']"))).sendKeys("Checklist 3");
+				
+				
+				// click on add button
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/form/button"))).click();
 
 	}
 

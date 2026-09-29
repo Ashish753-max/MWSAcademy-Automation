@@ -7,11 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Create_Checklist1 {
+public class Done_Checklist {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
 ChromeDriver driver = new ChromeDriver();
         
         // maximize the window
@@ -34,17 +34,11 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Checklist section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Checklist']"))).click();
-		
-		
-		
-		// enter the checklist title
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//input[@placeholder='What do you need to do?']"))).sendKeys("Checklist 1");
-		
-		
-		// click on add button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/form/button"))).click();
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Checklist']"))).click();
+				
+				// click on done button
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[1]/div[1]/button[1]"))).click();
+
 	}
 
 }
