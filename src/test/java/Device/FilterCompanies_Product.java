@@ -40,7 +40,7 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
 		
 		// click on Product section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[7]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Devices']"))).click();
 		
 		// click on All companies filter button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/div/div/div/div/button"))).click();
