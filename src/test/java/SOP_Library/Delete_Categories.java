@@ -35,6 +35,15 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on SOP Library section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='SOP Library']"))).click();
+		
+		// click on Categories section
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Categories']"))).click();
+		
+		//click on action button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[3]/div/div/button"))).click();
+		
+		//click on delete button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/button[2]"))).click();
 
 	}
 

@@ -35,6 +35,23 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on SOP Library section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='SOP Library']"))).click();
+		
+	    // click on category section
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Categories']"))).click();
+		
+		// click on add category button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Add Category']"))).click();
+		
+		// enter category name
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//input[@placeholder='e.g. Injectables']"))).sendKeys("Learning category");
+		
+		// write description
+		wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//textarea[@placeholder='What this category covers (optional)']"))).sendKeys("This category is for learning purpose");
+		
+		// click on create button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Create']"))).click();
 				
 				
 
