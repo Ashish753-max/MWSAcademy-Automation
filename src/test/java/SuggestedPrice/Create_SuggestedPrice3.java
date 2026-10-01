@@ -44,20 +44,20 @@ ChromeDriver driver = new ChromeDriver();
 		// click on suggested price section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Suggested Pricing']"))).click();
 				
-				// click on add price button
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button"))).click();
+		// click on add price button
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Add Pricing']"))).click();
 		
 		// click on the select company dropdown
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/button"))).click();
 		
 		// select the company from the dropdown
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/div/div[2]/div/button[3]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div[2]/div/button[3]"))).click();
 		
 		// click on device dropdown
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[2]/div/button"))).click();
 		
 		// select the device from the dropdown
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[2]/div/div/div[2]/div/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div[2]/div/button"))).click();
 		
 		// enter title
 				wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -79,8 +79,9 @@ ChromeDriver driver = new ChromeDriver();
 			        File file = new File("C:\\Users\\user\\Downloads\\Java_and_OOP_Concepts_First_Principles.pdf");
 			        fileInput.sendKeys(file.getAbsolutePath());
 			        
-			        // click on save button
-			        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/button[2]"))).click();
+			     // click on save button
+			        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Save Pricing']"))).click();
+			        
 			        Thread.sleep(4000); // Wait for 2 seconds to ensure the screenshot captures the final state
 			     // Create screenshots folder if it doesn't exist
 			        File screenshotsFolder = new File("screenshots");

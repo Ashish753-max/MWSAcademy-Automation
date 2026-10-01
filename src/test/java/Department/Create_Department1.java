@@ -45,7 +45,7 @@ ChromeDriver driver = new ChromeDriver();
 		// click on create group button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button"))).click();
 		
-		// enter group name
+		// enter department name
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[1]/div[1]/input"))).sendKeys("Machine Learning Group");
 		
@@ -53,7 +53,7 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[1]/div[2]/div/div/button"))).click();
 		
 		// click on add 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div/div[1]/div[2]/div/div/div/div/div/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div/button[1]"))).click();
 		
 /*		// enter department name
 		wait.until(ExpectedConditions.visibilityOfElementLocated(

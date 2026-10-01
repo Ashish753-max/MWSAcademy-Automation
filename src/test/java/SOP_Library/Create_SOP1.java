@@ -31,13 +31,13 @@ ChromeDriver driver = new ChromeDriver();
 				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Ashish@567");
 		
 				// click on login button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Login']"))).click();
 		
 		// click on SOP Library section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='SOP Library']"))).click();
 		
 		// click on create SOP button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='New SOP']"))).click();
 		
 		// enter sop number 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
@@ -47,30 +47,24 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[1]/div[2]/div/div/button"))).click();
 		
 		// select the category from the dropdown
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[1]/div[2]/div/div/div/div[2]/div/button[1]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div[2]/div/button[1]"))).click();
 		
 		// enter the SOP title
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//input[@placeholder='e.g. Late Patient Protocol']"))).sendKeys("How to replace the screen");
 		
-		// click on the department dropdown
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[3]/div/div/div"))).click();
-		
-		// select the department from the dropdown
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[3]/div/div/div[2]/div[2]/div/button[2]"))).click();
-		
 		// enter the content of the SOP
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[5]/div[2]/div/div[2]/div[1]"))).sendKeys("Step 1: Remove the back cover\nStep 2: Disconnect the battery\nStep 3: Remove the screws\nStep 4: Replace the screen\nStep 5: Reassemble the device");
+				By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[4]/div[2]/div/div[2]/div[1]"))).sendKeys("Step 1: Remove the back cover\nStep 2: Disconnect the battery\nStep 3: Remove the screws\nStep 4: Replace the screen\nStep 5: Reassemble the device");
 		
 		// click on the checkbox of clinical review
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/label[1]/input"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[6]/input"))).click();
 		
 		// click on the checkbox of medical director approval
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/label[2]/input"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[7]/input"))).click();
 		
 		// click on create SOP button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[7]/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Create SOP']"))).click();
 
 	}
 

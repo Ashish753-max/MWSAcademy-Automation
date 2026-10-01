@@ -30,8 +30,8 @@ ChromeDriver driver = new ChromeDriver();
         wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Ashish@567");
 		
-				// click on login button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
+     // click on login button
+     		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Login']"))).click();
 		
 		//  click on Companies section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Companies']"))).click();
@@ -46,7 +46,7 @@ wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/b
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div[1]/div[1]/div/button"))).click();
 				
 				// click on save button
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[3]/div/button[2]"))).click();
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Update Company']"))).click();
 				
 				// click on view
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"admin-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr/td[5]/div/button[1]"))).click();

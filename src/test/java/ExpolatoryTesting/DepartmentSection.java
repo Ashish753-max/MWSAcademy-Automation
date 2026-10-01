@@ -30,11 +30,11 @@ ChromeDriver driver = new ChromeDriver();
         wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Ashish@567");
 		
-				// click on login button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[3]/button"))).click();
-		
-		// click on Group section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[5]/button"))).click();
+     // click on login button
+     		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Login']"))).click();
+     		
+     		// click on Department section
+     		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Department']"))).click();
 
 	}
 
