@@ -38,7 +38,7 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Courses']"))).click();
 		
 		// click on create course button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Add Course']"))).click();
 		
 		// click on select company dropdown
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[1]/div[1]/div/button"))).click();
@@ -61,7 +61,7 @@ ChromeDriver driver = new ChromeDriver();
 						By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("Deep learning is a subset of machine learning that uses neural networks to model and solve complex problems.");
 				
 				// click on create button
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[3]/button[2]"))).click();
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Create']"))).click();
 
 	}
 

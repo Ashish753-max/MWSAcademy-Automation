@@ -44,7 +44,7 @@ ChromeDriver driver = new ChromeDriver();
 						
 						
 						//click on add lession button
-						wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/div/aside/div[5]/button[1]"))).click();
+						wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Add Lesson']"))).click();
 		
 		// enter Lession title	
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
