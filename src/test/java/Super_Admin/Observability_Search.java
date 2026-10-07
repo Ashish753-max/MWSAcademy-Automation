@@ -32,7 +32,7 @@ ChromeDriver driver = new ChromeDriver();
 				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Appnox@2026");
 		
 				// click on login button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/div/form/button"))).click();
+ 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Sign in']"))).click();
 		
 		// click on observability
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Observability']"))).click();

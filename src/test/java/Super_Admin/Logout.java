@@ -38,9 +38,8 @@ public class Logout {
                     .sendKeys("Appnox@2026");
 
             // Click Login
-            wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//*[@id='root']/div[2]/div/form/button")))
-                    .click();
+     		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Sign in']"))).click();
+
 
             // Click Profile icon
             wait.until(ExpectedConditions.elementToBeClickable(

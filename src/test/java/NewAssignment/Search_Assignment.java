@@ -40,7 +40,7 @@ ChromeDriver driver = new ChromeDriver();
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/div/div"))).click();
 		
-		
+			
 		// enter search text
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Ashish");
