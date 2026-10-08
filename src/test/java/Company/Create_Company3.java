@@ -80,7 +80,7 @@ ChromeDriver driver = new ChromeDriver();
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[2]/div[1]/div/div[2]/div[2]/div[2]/div/div[2]/div[1]"))).sendKeys("The Aladdin platform (Asset, Liability, and Debt and Derivative Investment Network) is an end-to-end investment and risk management software developed by BlackRock. It unifies the entire investment process—from portfolio management and risk assessment to trade execution and compliance—using a single, centralized dataset");
 			
 			// click on add product button
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[1]/button"))).click();
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Add Device']"))).click();
 			
 			// enter product name
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div[2]/div[2]/div/div[2]/div[1]/input"))).sendKeys("BlackRock Investment Institute (BII)");
@@ -99,7 +99,7 @@ ChromeDriver driver = new ChromeDriver();
 
 		
 		// click on save button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[3]/div/button[2]"))).click();
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Save Company']"))).click();
 		
 		 // Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");
