@@ -48,7 +48,7 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// enter role name in search field
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/div/input"))).sendKeys("Nurse");
+				By.xpath("//input[@placeholder='Search roles...']"))).sendKeys("Nurse");
 		
 		// // Create screenshots folder if it doesn't exist
         File screenshotsFolder = new File("screenshots");

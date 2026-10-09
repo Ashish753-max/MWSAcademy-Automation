@@ -34,24 +34,23 @@ public class Logout {
 
             // Enter password
             wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("//input[@placeholder='••••••••']")))
-                    .sendKeys("Appnox@2026");
+    				By.xpath("//input[@placeholder='Enter your password']"))).sendKeys("Appnox@2026");
 
             // Click Login
      		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Sign in']"))).click();
 
 
-            // Click Profile icon
+            // Click on profile
             wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//*[@id='root']/div[2]/div/header/div[2]/div[2]/div/div[1]")))
+                    By.xpath("//*[@id=\"root\"]/div[2]/div/header/div[2]/div[3]/div")))
                     .click();
 
             // Click Logout
             wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//*[@id='root']/div[2]/div/header/div[2]/div[2]/div[2]/div[2]/button")))
+                    By.xpath("//button[normalize-space()='Sign Out']")))
                     .click();
 
-       //     System.out.println("Test Run " + i + " completed successfully.");
+          System.out.println("Test Run " + i + " completed successfully.");
         }
 
         // Close browser after all 5 runs

@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Onboarding_Search {
+public class ActivityAndLogs {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -28,17 +28,13 @@ ChromeDriver driver = new ChromeDriver();
         
         // enter password
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Appnox@2026");
+				By.xpath("//input[@placeholder='Enter your password']"))).sendKeys("Appnox@2026");
 		
 				// click on login button
  		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Sign in']"))).click();
-		
-		// click on onboarding
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Onboarding']"))).click();
-		
-		//search with email 
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//input[@placeholder='Search organization or email…']"))).sendKeys("ashishappnox1@gmail.com");
+ 		
+ 		// click on activity and logs  section 		
+ 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Activity & Logs"))).click();
 
 	}
 

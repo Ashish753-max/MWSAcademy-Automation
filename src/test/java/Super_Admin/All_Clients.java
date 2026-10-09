@@ -7,10 +7,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Onboarding {
+public class All_Clients {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		
 ChromeDriver driver = new ChromeDriver();
         
@@ -28,13 +29,13 @@ ChromeDriver driver = new ChromeDriver();
         
         // enter password
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Appnox@2026");
+				By.xpath("//input[@placeholder='Enter your password']"))).sendKeys("Appnox@2026");
 		
 				// click on login button
  		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Sign in']"))).click();
-		
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Onboarding']"))).click();
-
+ 		
+ 		// click on All clients section
+ 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='All Clients']"))).click();
 
 	}
 

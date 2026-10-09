@@ -43,14 +43,14 @@ ChromeDriver driver = new ChromeDriver();
  		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Roles']"))).click();
 		
 		// click on Create Role button
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[normalize-space()='Create Role'])[1]"))).click();
 				
 				// click on management 
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[1]/div[2]/div/button[2]"))).click();
 				
 				// enter role name
 				wait.until(ExpectedConditions.visibilityOfElementLocated(
-						By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[1]/div[1]/input"))).sendKeys("Head Nurse");
+						By.xpath("//input[@placeholder='Enter role name']"))).sendKeys("Head Nurse");
 				
 				// select members permissions
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[2]/div[2]/div/div[1]/div/button/div"))).click();
@@ -83,7 +83,7 @@ ChromeDriver driver = new ChromeDriver();
 				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[2]/div[2]/div/div[11]/div/button/div"))).click();
 				
 				// click on the create role button
-				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[3]/button[2]"))).click();
+				wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button[normalize-space()='Create Role'])[2]"))).click();
 				
 				// Create screenshots folder if it doesn't exist
 		        File screenshotsFolder = new File("screenshots");

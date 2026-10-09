@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Overview_Observability {
+public class Notification {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -28,14 +28,16 @@ ChromeDriver driver = new ChromeDriver();
         
         // enter password
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Appnox@2026");
+				By.xpath("//input[@placeholder='Enter your password']"))).sendKeys("Appnox@2026");
 		
 				// click on login button
  		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Sign in']"))).click();
-		
-		// click on observability
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[2]/div/main/div/div/div/a[1]"))).click();
-		
+ 		
+ 		// click on Settings  section 		
+ 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Settings"))).click();
+ 		
+ 		// click on Notification  section
+ 		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("//*[@id=\"root\"]/div[2]/div/main/div/div/div[1]/button[2]"))).click();
 
 	}
 

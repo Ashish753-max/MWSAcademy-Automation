@@ -29,7 +29,7 @@ ChromeDriver driver = new ChromeDriver();
         
         // enter password
         wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Appnox@2026");
+				By.xpath("//input[@placeholder='Enter your password']"))).sendKeys("Appnox@2026");
 		
 				// click on login button
  		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Sign in']"))).click();
