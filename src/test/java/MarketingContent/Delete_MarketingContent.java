@@ -37,16 +37,22 @@ ChromeDriver driver = new ChromeDriver();
 				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Ashish@567");
 		
 				// click on login button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
+ 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Login']"))).click();
 		
 		// click on marketing content section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Marketing']"))).click();
 		
+		// click on action button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr/td[6]/div/div/button"))).click();
+		
 		// click on delete button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[6]/div/button[3]"))).click();
+
+wait.until(ExpectedConditions.elementToBeClickable(
+    By.xpath("//button[normalize-space()='Delete Marketing']")))
+    .click();
 		
 		// click on confirm delete button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[2]/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Delete']"))).click();
 		
 		Thread.sleep(4000); // Wait for 2 seconds to ensure the screenshot captures the final state
         
