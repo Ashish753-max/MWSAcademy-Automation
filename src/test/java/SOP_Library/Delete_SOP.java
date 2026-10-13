@@ -1,15 +1,21 @@
 package SOP_Library;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.google.common.io.Files;
+
 public class Delete_SOP {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -47,6 +53,14 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on confirm delete button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/div/div[2]/button[2]"))).click();
+		
+		// Take screenshot with the file name
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+        String screenshotPath = "screenshots/Delete_SOP.png";
+        Files.copy(srcFile, new File(screenshotPath));
+        
+        System.out.println("Screenshot saved at: " + screenshotPath);
 
 	}
 
