@@ -31,11 +31,11 @@ ChromeDriver driver = new ChromeDriver();
 				By.xpath("//input[@placeholder='••••••••']"))).sendKeys("Ashish@567");
 		
 				// click on login button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div/div/div[1]/div/div/form/div[2]/button"))).click();
+ 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Login']"))).click();
 		
 		// click on search field
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("//*[@id=\"root\"]/div[1]/div[1]/header/div/div[2]/div[1]/input"))).sendKeys("Automation");
+				By.xpath("//input[@placeholder='Search…']"))).sendKeys("Automation");
 
 	}
 

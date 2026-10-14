@@ -39,10 +39,10 @@ ChromeDriver driver = new ChromeDriver();
 				// click on login button
  		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Login']"))).click();
 		
-		// click on Groups section
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[2]/div[1]/aside/nav/div[4]/button"))).click();
+		// click on Department section
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Department']"))).click();
 		
-		// click on create group button
+		// click on create Department button
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/header/div[2]/button"))).click();
 		
 		// enter department name

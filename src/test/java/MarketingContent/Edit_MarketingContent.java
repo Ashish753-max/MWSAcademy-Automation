@@ -36,19 +36,22 @@ ChromeDriver driver = new ChromeDriver();
 		// click on marketing content section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Marketing']"))).click();
 		
+		// click on action button
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[6]/div/div/button"))).click();
+		
 		// click on the edit button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/main/div/div/div/div[1]/div/div/div/table/tbody/tr[1]/td[6]/div/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Edit Marketing']"))).click();
 		
 		// clear the title field
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/input"))).clear();
+				By.xpath("//input[@placeholder='Enter Marketing Title']"))).clear();
 		
 		// enter new title
 		wait.until(ExpectedConditions.visibilityOfElementLocated(
-				By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[1]/div[2]/input"))).sendKeys("Updated machine learning fundamentals");
+				By.xpath("//input[@placeholder='Enter Marketing Title']"))).sendKeys("Updated machine learning fundamentals");
 		
 		// click on the update button
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Update Marketing']"))).click();
 
 	}
 
