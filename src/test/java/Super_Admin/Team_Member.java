@@ -39,7 +39,7 @@ ChromeDriver driver = new ChromeDriver();
 				// click on login button
  		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Sign in']"))).click();
  		
- 		// click on team member   section 		
+ 		// click on team member section 		
  		wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Team Members"))).click();
  		
  	// Take screenshot with the file name

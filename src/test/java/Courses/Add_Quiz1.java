@@ -53,7 +53,7 @@ ChromeDriver driver = new ChromeDriver();
 		Thread.sleep(8000);
 		
 		// click on the publish quiz 
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div[2]/div[2]/form/div[2]/div/button[2]"))).click();
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Publish Quiz']"))).click();
 
 	}
 
