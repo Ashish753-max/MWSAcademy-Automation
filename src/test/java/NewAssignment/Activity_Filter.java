@@ -1,15 +1,21 @@
 package NewAssignment;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.google.common.io.Files;
+
 public class Activity_Filter {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
 ChromeDriver driver = new ChromeDriver();
@@ -38,6 +44,14 @@ ChromeDriver driver = new ChromeDriver();
 		
 		// click on Activity section
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"app-scroll-container\"]/div/div/div/div[2]/button[3]"))).click();
+		
+		// Take screenshot with the file name
+        TakesScreenshot screenshot = (TakesScreenshot) driver;
+        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+        String screenshotPath = "screenshots/Activity filter.png";
+        Files.copy(srcFile, new File(screenshotPath));
+        
+        System.out.println("Screenshot saved at: " + screenshotPath);
 
 	}
 
